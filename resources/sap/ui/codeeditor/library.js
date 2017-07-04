@@ -33,7 +33,7 @@ sap.ui.define(['sap/ui/core/Core'],
 		],
 		elements: [],
 		noLibraryCSS: false,
-		version: "1.46.10"
+		version: "1.46.11"
 	});
 
 
