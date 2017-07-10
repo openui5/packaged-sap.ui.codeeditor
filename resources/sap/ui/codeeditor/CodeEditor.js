@@ -28,7 +28,7 @@ sap.ui.define([
 	 * @extends sap.ui.core.Control
 	 *
 	 * @author SAP SE
-	 * @version 1.48.3
+	 * @version 1.48.4
 	 *
 	 * @constructor
 	 * @public
@@ -356,8 +356,9 @@ sap.ui.define([
 		return this._oEditor;
 	};
 
-	CodeEditor.prototype.destroy = function () {
-		this._oEditor.destroy();
+	CodeEditor.prototype.destroy = function (bSuppressInvalidate) {
+		this._oEditor.destroy(bSuppressInvalidate);
+		Control.prototype.destroy.call(this, bSuppressInvalidate);
 	};
 
 	return CodeEditor;
